@@ -1,0 +1,5 @@
+★ Lexical analysis is the first phase in the compilation process.
+★ Lexical analyzer (scanner) scans the whole source program and when it finds the meaningful sequence of characters (lexemes) then it converts it into a token
+★ Token: lexemes mapped into token-name and attribute-value.
+Example: int -> <keyword, int>
+★ It always matches the longest character sequence.
