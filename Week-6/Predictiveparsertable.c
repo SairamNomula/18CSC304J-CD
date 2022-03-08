@@ -6,9 +6,9 @@ void main()
     char fin[10][20],st[10][20],ft[20][20],fol[20][20];
     int a=0,e,i,t,b,c,n,k,l=0,j,s,m,p;
 
-    printf("enter the no. of nonterminals\n");
+    printf("Enter the no. of nonterminals\n");
     scanf("%d",&n);
-    printf("enter the productions in a grammar\n");
+    printf("Enter the productions in a grammar\n");
     for(i=0;i<n;i++)
         scanf("%s",st[i]);
     for(i=0;i<n;i++)
@@ -220,3 +220,18 @@ void main()
     }
 
 }
+
+// Output:
+// enter the no. of nonterminals
+// 2
+// enter the productions in a grammar
+// S->CC
+// C->ec | d
+// first
+// FIRS [S]=e
+// FIRS [C]=e
+// follow
+// FOLLOW [S]=$
+// FOLLOW [C]=e$
+// M[S, e]=S->cc
+// M[C, e]=C->ec
