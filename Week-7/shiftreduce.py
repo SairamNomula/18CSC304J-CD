@@ -38,3 +38,26 @@ while True:
 	if action:
 		print(f'{stack: <15}'+"|"+f'{inp: <15}'+"|"+f'Rejected')
 		break
+
+# Output
+
+# Stack          |Input Buffer   |Parsing Action
+# --------------------------------------------------
+# $i             |d+id*id+id*id  |Shift
+# $id            |+id*id+id*id   |Shift
+# $E             |+id*id+id*id   |Reduce S->id
+# $E+            |id*id+id*id    |Shift
+# $E+i           |d*id+id*id     |Shift
+# $E+id          |*id+id*id      |Shift
+# $E+E           |*id+id*id      |Reduce S->id
+# $E+E*          |id+id*id       |Shift
+# $E+E*i         |d+id*id        |Shift
+# $E+E*id        |+id*id         |Shift
+# $E+E*E         |+id*id         |Reduce S->id
+# $E+E*E+        |id*id          |Shift
+# $E+E*E+i       |d*id           |Shift
+# $E+E*E+id      |*id            |Shift
+# $E+E*E+E       |*id            |Reduce S->id
+# $E+E*E+E*      |id             |Shift
+# $E+E*E+E*i     |d              |Shift
+# $E+E*E+E*i     |d              |Rejected
